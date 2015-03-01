@@ -1,0 +1,91 @@
+<head>
+  <title>lifeclock</title>
+  <link rel="icon" sizes="16x16" href="/icon-16x16.png">
+</head>
+
+<body>
+</body>
+
+<template name="layout">
+  <div id="content">
+    {{> yield}}
+  </div>
+</template>
+
+<template name="footer">
+<div class="push"></div>
+<div id="footer">
+  <div class="wrap">
+    <div class="content">
+      A project by <a href="http://grantbachman.com">Grant David Bachman</a>
+    </div>
+  </div>
+</div>
+</template>
+
+<template name="clock">
+  <div id="clock">
+    <div class="wrap">
+      <div class="content">
+        <span id="days">
+          <h1><div class="value text-center"></div></h1>
+          <div class="units text-center">days</div>
+        </span>
+        <span id="hours">
+          <h1><div class="value text-center"></div></h1>
+          <div class="units text-center">hours</div>
+        </span>
+        <span id="minutes">
+          <h1><div class="value text-center"></div></h1>
+          <div class="units text-center">minutes</div>
+        </span>
+        <span id="seconds">
+          <h1><div class="value text-center"></div></h1>
+          <div class="units text-center">seconds</div>
+        </span>
+
+      </div>
+    </div>
+  </div>
+  <div id="clock-description">
+    <div class="row">
+    <div class="small-12 medium-10 medium-centered large-8 columns">
+      <h4>
+      This is your Life Clock. Contained within these
+      <span id="description-days"></span>
+      days is what remains of your entire existence. Many of us weild time like
+      an infinite resource, but the truth is our time on this planet is
+      extremely limited. The clock is ticking and it'll never stop.
+    </h4>
+      </div>
+    </div>
+  </div>
+  {{> footer}}
+</template>
+
+<template name="datePrompt">
+  <div id="datePrompt">
+    <h1 class="text-center">Please enter your birthday</h1>
+    <form>
+      <div class="row">
+        <div class="small-4 medium-3 medium-offset-1 large-2 large-offset-3 columns">
+          <input type="text" name="day" maxlength=2 placeholder="MM" />
+        </div>
+        <div class="small-4 medium-3 large-2 columns">
+          <input type="text" name="month" maxlength=2 placeholder="DD" />
+        </div>
+        <div class="small-4 medium-3 large-2 columns end">
+          <input type="text" name="year" maxlength=4 placeholder="YYYY" />
+        </div>
+
+        <!-- For some reason, Meteor won't insert the form
+        without an actual button present -->
+        <div>
+          <input type="submit" style="visibility: hidden" />
+        </div>
+
+      </div>
+    </form>
+  </div>
+  {{> footer}}
+</template>

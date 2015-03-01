@@ -1,0 +1,70 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,200);
+
+body { 
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(star_background.jpg) no-repeat center center fixed; 
+  background-size: cover;
+  font-family: Raleway;
+  color: white;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: white;
+  margin-bottom: 1em;
+}
+
+#clock h1 {
+  color: white;
+  margin-bottom: 0em;
+}
+
+#datePrompt,#clock {
+  position: fixed;
+  top: 25%;
+  height: 30px;
+  width: 100%;
+}
+
+
+#clock span {
+  float: left;
+  margin-right: 2em;
+}
+#clock span:last-child {
+  float: left;
+  margin-right: 0em;
+}
+
+#clock-description {
+  position: fixed;
+  top: 50%;
+  width: 100%;
+  height: 30px;
+}
+
+.wrap {
+  position: relative;
+  float: left;
+  left: 50%;
+}
+.content {
+  position: relative;
+  float: left;
+  left: -50%;
+}
+
+input[type=text] {
+  height: 1.5em;
+  font-size: 2.75em;
+  border-radius: .4em;
+}
+
+input:focus {
+  box-shadow: 0 0 1em #4C7CFF;
+}
+
+#footer {
+  position: fixed; 
+  bottom: 0px;
+  height: 30px;
+  width: 100%;
+}
